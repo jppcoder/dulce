@@ -1,0 +1,137 @@
+.mainContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tituloProducto {
+    text-align: center;
+    font-family: $fontannie;
+    font-size: 2em;
+}
+
+.main { 
+    margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 70%;
+    .main div {
+        padding: 0px;
+        text-align: center;	
+    }
+    .main div div { 
+        margin-top: -30px;
+        font-size: 3em;
+        font-family: $fontannie;
+    }
+}
+
+//------------------------------Aside---------------------//
+.aside { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:auto;
+    padding-top: 0px;
+    margin: 0px;
+    h4 { 
+        font-family: $fontannie;
+        margin-top: 30px;
+        font-size: 2.5em;
+        color: white;
+        box-shadow: 0px 9px 21px 6px rgba(0,0,0,0.5);
+        background-color:$rosita;
+        border-radius: 10px;
+        padding-left: 30px;
+        width: 250px;
+	}						 
+}
+.asideList {font-family:$fontraleway;
+    font-size: 0.5em;  
+    color: white;
+    padding-left: 10px;
+    li {
+        font-family:$fontraleway;
+        font-size: 0.8em;
+    }
+}
+//----------------Tarjetas de productos animaadas------------------//
+figure.imgcont {
+    font-family:$fontraleway;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 320px;
+    max-height: 260px;
+    width: 100%;
+    background: rgb(224,99,119);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 9px 21px 6px rgba(0,0,0,0.5);  
+    img {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.35s;
+    }
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 5em 3em;
+        width: 100%;
+        height: 100%;
+    }
+    figcaption::before {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        bottom: 50%;
+        left: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        content: '';
+        opacity: 0;
+        background-color: #ffffff;
+        transition: all 0.4s;
+        transition-delay: 0.6s;
+    }
+    h2,  p {
+        margin: 0 0 5px;
+        opacity: 0;
+    }
+    h2 {
+        word-spacing: -0.15em;
+        font-weight: 300;
+        text-transform: uppercase;
+        transform: translate3d(0%, 50%, 0);
+        transition-delay: 0.3s;
+    }
+    h2 span {
+        font-weight: 800;
+    }
+    p {
+        font-weight: 200	;
+        transition-delay: 0s;
+    }  
+}
+//----------------tarjeta efecto hover-before-------------//
+figure.imgcont:hover img {
+    opacity: 0.35;
+}
+figure.imgcont:hover figcaption h2 {
+    opacity: 1;
+    transform: translate3d(0%, 0%, 0);
+    transition-delay: 0.3s;
+}
+figure.imgcont:hover figcaption p {
+    opacity: 0.9;
+    transition-delay: 0.6s;
+}
+figure.imgcont:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    top: 30px;
+    bottom: 30px;
+    opacity: 1;
+    transition-delay: 0s;
+}

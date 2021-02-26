@@ -1,0 +1,930 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+* {
+  margin: 0px;
+  padding: 0px; }
+
+.start {
+  background-color: #e06377;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  animation-name: start;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  align-items: center; }
+
+#dulce {
+  font-size: 150px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  color: #e06377;
+  margin-top: 50px; }
+
+#tejido {
+  font-size: 80px;
+  text-align: center;
+  color: #e06377; }
+
+@keyframes start {
+  from {
+    background-color: #fff; }
+  50% {
+    background-color: #fff; }
+  to {
+    background-color: #e06377; } }
+
+.boton-start {
+  width: 100px;
+  color: #fff;
+  background-color: #e06377;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 15px 18px 30px 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 14px;
+  box-shadow: 0 0 4px #999;
+  background-position: center;
+  transition: background 0.8s;
+  text-decoration: none;
+  animation-name: botonStart;
+  animation-duration: 7s;
+  animation-fill-mode: forwards; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.boton-start:hover {
+  background: #4b0626 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  color: white; }
+
+.boton-start:active {
+  background-color: #292d3e;
+  background-size: 100%;
+  transition: background 0s; }
+
+#espera {
+  color: #fff;
+  margin-top: -80px; }
+
+#intro-link {
+  text-decoration: none; }
+
+@keyframes botonStart {
+  from {
+    transform: scale(0);
+    transform: rotate(0deg);
+    border: #e06377;
+    background-color: #fff;
+    box-shadow: none;
+    opacity: 0;
+    margin: 50px; }
+  50% {
+    transform: scale(0);
+    transform: rotate(180deg);
+    border: #e06377;
+    background-color: #e06377;
+    box-shadow: none;
+    opacity: 0;
+    margin: 50px; }
+  to {
+    transform: scale(2);
+    margin: 50px; } }
+
+.shop1 {
+  height: 300px; }
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  transition: .3s ease all;
+  font-family: "Montserrat", sans-serif; }
+
+.containerMov_titulo {
+  padding-left: 40px;
+  font-family: "Sacramento", cursive; }
+
+.containerMov__text-parrafo {
+  font-size: 1.4em;
+  color: #504e4e;
+  padding: 20px;
+  position: relative;
+  padding: 40px;
+  font-family: "Montserrat", sans-serif; }
+
+/********* menu slider ***************/
+@keyframes autoplay {
+  25% {
+    transform: translate3d(calc(-100% * 0), 0, 0); }
+  50% {
+    transform: translate3d(calc(-100% * 1), 0, 0); }
+  75% {
+    transform: translate3d(calc(-100% * 2), 0, 0); }
+  100% {
+    transform: translate3d(calc(-100% * 3), 0, 0); } }
+
+.slidebox {
+  display: flex;
+  justify-content: center; }
+
+.container-all {
+  margin-top: 50px;
+  display: flex;
+  padding: 40px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center; }
+
+.item-slide img {
+  max-width: 100%; }
+
+.slide {
+  display: flex;
+  transform: translate3d();
+  transition: all 600ms;
+  animation-name: autoplay;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
+.item-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 100%; }
+
+.pagination {
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+
+.pagination-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  transition: all 300ms; }
+
+.pagination-item:hover {
+  transform: scale(2); }
+
+.pagination-item img {
+  display: inline-block;
+  max-width: none;
+  height: 100%;
+  transform: scale(1);
+  opacity: 0;
+  transition: all 300ms; }
+
+.pagination-item:hover img {
+  opacity: 1;
+  transform: scale(1); }
+
+input[id="1"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(0, 0, 0); }
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"] {
+  background: #fff; }
+
+input[id="2"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 1), 0, 0); }
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"] {
+  background: #fff; }
+
+input[id="3"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 2), 0, 0); }
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
+  background: #fff; }
+
+input[id="4"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 3), 0, 0); }
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"] {
+  background: #fff; }
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  z-index: 500;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 50px;
+  padding-right: 40px;
+  background-color: #e06377;
+  max-height: 65px; }
+
+.switch {
+  background: #100F10;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin-top: 16px;
+  height: 30px; }
+
+.switchContent {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 0px; }
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+
+.switch.active {
+  background: orange;
+  color: #000; }
+
+.switch.active::after {
+  right: 0;
+  left: unset; }
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff; }
+
+.logo {
+  z-index: 1500; }
+
+.logoprincipal {
+  padding: 10px;
+  width: 110px;
+  height: 120px;
+  margin-left: 53px; }
+
+.logodark {
+  display: none;
+  padding: 10px;
+  width: 110px;
+  height: 120px; }
+
+#btn-menu {
+  display: none; }
+
+header label {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-right: 1px solid #f09a9a; }
+
+header label:hover {
+  cursor: pointer;
+  background-color: #e06377; }
+
+header label img {
+  height: 30px;
+  width: 25px;
+  padding-left: 2px; }
+
+.menu ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 20px;
+  display: flex; }
+
+.menu li:hover {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.aside p {
+  font-weight: 10px;
+  font-size: 15px; }
+
+.menu li a {
+  display: block;
+  padding: 10px 25px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Sacramento", cursive;
+  font-size: 2em; }
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap; }
+
+.tituloProducto {
+  text-align: center;
+  font-family: "Sacramento", cursive;
+  font-size: 2em; }
+
+.main {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 70%; }
+  .main .main div {
+    padding: 0px;
+    text-align: center; }
+  .main .main div div {
+    margin-top: -30px;
+    font-size: 3em;
+    font-family: "Sacramento", cursive; }
+
+.aside {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: auto;
+  padding-top: 0px;
+  margin: 0px; }
+  .aside h4 {
+    font-family: "Sacramento", cursive;
+    margin-top: 30px;
+    font-size: 2.5em;
+    color: white;
+    box-shadow: 0px 9px 21px 6px rgba(0, 0, 0, 0.5);
+    background-color: #e06377;
+    border-radius: 10px;
+    padding-left: 30px;
+    width: 250px; }
+
+.asideList {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.5em;
+  color: white;
+  padding-left: 10px; }
+  .asideList li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em; }
+
+figure.imgcont {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 320px;
+  max-height: 260px;
+  width: 100%;
+  background: #e06377;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 9px 21px 6px rgba(0, 0, 0, 0.5); }
+  figure.imgcont img {
+    opacity: 1;
+    width: 100%;
+    transition: opacity 0.35s; }
+  figure.imgcont figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5em 3em;
+    width: 100%;
+    height: 100%; }
+  figure.imgcont figcaption::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    bottom: 50%;
+    left: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    content: '';
+    opacity: 0;
+    background-color: #ffffff;
+    transition: all 0.4s;
+    transition-delay: 0.6s; }
+  figure.imgcont h2, figure.imgcont p {
+    margin: 0 0 5px;
+    opacity: 0; }
+  figure.imgcont h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: translate3d(0%, 50%, 0);
+    transition-delay: 0.3s; }
+  figure.imgcont h2 span {
+    font-weight: 800; }
+  figure.imgcont p {
+    font-weight: 200;
+    transition-delay: 0s; }
+
+figure.imgcont:hover img {
+  opacity: 0.35; }
+
+figure.imgcont:hover figcaption h2 {
+  opacity: 1;
+  transform: translate3d(0%, 0%, 0);
+  transition-delay: 0.3s; }
+
+figure.imgcont:hover figcaption p {
+  opacity: 0.9;
+  transition-delay: 0.6s; }
+
+figure.imgcont:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  top: 30px;
+  bottom: 30px;
+  opacity: 1;
+  transition-delay: 0s; }
+
+* {
+  font-size: 14px; }
+
+.tituloContacto {
+  text-align: center;
+  font-family: "Sacramento", cursive; }
+
+.mainContact {
+  margin-top: 60px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 100px; }
+
+.field_contacto {
+  border: none;
+  text-align: center; }
+
+#formContact {
+  display: grid;
+  grid-template-areas: "nombre nombre apellido apellido" "email email telefono telefono" "localidad localidad btn-submit clean";
+  grid-template-rows: 50px 40px 40px;
+  grid-template-columns: auto;
+  justify-items: stretch;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  padding: 30px;
+  border: none;
+  align-items: center;
+  background-color: #e06377;
+  border-radius: 10px;
+  box-shadow: 0px 9px 21px 6px rgba(0, 0, 0, 0.5); }
+
+#formContact .nombre {
+  grid-area: nombre;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  outline: none;
+  transition: 0.4s border;
+  font-size: 1.4em;
+  color: #fff; }
+
+#formContact .nombre::placeholder {
+  padding-left: 10px;
+  color: #fff; }
+
+#formContact .apellido {
+  grid-area: apellido;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  outline: none;
+  transition: 0.4s border;
+  font-size: 1.4em;
+  color: #fff; }
+
+#formContact .apellido::placeholder {
+  padding-left: 10px;
+  color: #fff; }
+
+#formContact .email {
+  grid-area: email;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  outline: none;
+  transition: 0.4s border;
+  font-size: 1.4em;
+  color: #fff; }
+
+#formContact .email::placeholder {
+  padding-left: 10px;
+  color: #fff; }
+
+#formContact .telefono {
+  grid-area: telefono;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  outline: none;
+  transition: 0.4s border;
+  font-size: 1.4em;
+  color: #fff; }
+
+#formContact .telefono::placeholder {
+  padding-left: 10px;
+  color: #fff; }
+
+#formContact .localidad {
+  grid-area: localidad;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  outline: none;
+  transition: 0.4s border;
+  font-size: 1.4em;
+  color: #fff; }
+
+#formContact .localidad::placeholder {
+  padding-left: 10px;
+  color: #fff; }
+
+#formContact #btn-sub {
+  grid-area: btn-submit;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.4em;
+  background-color: #c83349; }
+
+#formContact .btn-clean {
+  grid-area: clean;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.4em;
+  background-color: #c83349; }
+
+#formContact input {
+  background-color: #e06377; }
+
+.tituloCompras {
+  text-align: center;
+  font-family: "Sacramento", cursive; }
+
+/********* tarjetas de valoracion ***************/
+.valoracion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px; }
+
+.valoracion__tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px #e06377;
+  padding: 20px;
+  margin: 20px;
+  transition: width 3s; }
+
+.valoracion__tarjeta-img img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  box-shadow: 4px 4px 10px #e06377; }
+
+.valoracion__tarjeta-texto {
+  margin-top: 10px; }
+
+.valoracion__tarjeta:hover {
+  transform: translateY(-20px); }
+
+/********* seccion compra ***************/
+.shop1 {
+  background-color: #e06377; }
+
+span {
+  color: white; }
+
+.dropwown-text {
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif; }
+
+.dropwown-menu li a {
+  font-family: "Montserrat", sans-serif; }
+
+.footerP {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .footerP P {
+    font-size: 1.4em;
+    padding: 40px;
+    font-family: "Montserrat", sans-serif;
+    width: 100%; }
+  .footerP img {
+    margin-top: 20px;
+    height: 40px;
+    width: 40px; }
+  .footerP h4 {
+    background: #e06377;
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    height: 90px;
+    font-family: "Montserrat", sans-serif; }
+  .footerP span {
+    font-size: 1.2em; }
+
+#jpp0 {
+  animation-name: jpp;
+  transition: all 600ms;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
+#jpp1 {
+  animation-name: jpp;
+  transition: all 600ms;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 2s; }
+
+#jpp2 {
+  animation-name: jpp;
+  transition: all 600ms;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 3s; }
+
+@keyframes jpp {
+  from {
+    color: #49464e; }
+  50% {
+    color: #fff; }
+  to {
+    color: #2e292a; } }
+
+@media (min-width: 100px) and (max-width: 768px) {
+  .imgcont {
+    margin: 0px;
+    width: 600px;
+    min-width: 220px;
+    max-width: 380px;
+    max-height: 260px; }
+  .mainContent {
+    display: flex;
+    justify-content: center; }
+  .containerMov_titulo {
+    padding-left: 20px; }
+  .tituloProducto .tituloContacto .containerMov_titulo {
+    font-size: 2rem; }
+  .logoprincipal .logodark {
+    height: 110px;
+    width: 100px; }
+  .switchContent {
+    margin-right: -50px; }
+  .containerMov {
+    max-height: 350px; }
+  .containerMov__text-parrafo {
+    font-size: 1.2em;
+    padding: 20px; }
+  #dulce {
+    display: flex;
+    max-width: 300px;
+    font-size: 70px;
+    margin-top: 150px;
+    text-align: center;
+    padding-right: 10px; }
+  #tejido {
+    font-size: 45px; }
+  #espera {
+    font-size: 30px;
+    text-align: center; }
+  .emma {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em;
+    color: #fff;
+    padding-left: 25%;
+    padding-top: 5px; }
+  header {
+    display: flex;
+    background-color: #e06377;
+    height: 50px; }
+  header label {
+    display: inline-flex; }
+  .switch {
+    margin-top: 10px; }
+  .menu {
+    position: absolute;
+    background: #e06377;
+    width: 70%;
+    margin-left: -70%;
+    margin-top: 50px;
+    transition-duration: 0.5s;
+    z-index: 100; }
+  .menu ul {
+    flex-direction: column;
+    padding-left: 0px; }
+  .menu li a {
+    text-align: left;
+    border-bottom: 1px solid #fff; }
+  .menu li {
+    background-color: none; }
+  #btn-menu:checked ~ .menu {
+    margin: 0px;
+    margin-top: 50px; }
+  .main {
+    margin-top: 0px;
+    display: flex;
+    min-width: 100%; }
+  .img1 img, .img2 img, .img3 img, .img4 img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    margin: 30px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 10px rgba(224, 99, 119, 0.5); }
+  .img1 img:hover, .img2 img:hover, .img3 img:hover, .img4 img:hover {
+    width: 320px;
+    height: 320px;
+    transition-duration: 1s;
+    border-radius: 160px; }
+  .main div div {
+    margin-top: -30px;
+    font-size: 2em;
+    font-family: 'Caveat', cursive; }
+  .aside {
+    padding-top: 50px;
+    padding: 0px;
+    margin: 20px;
+    width: 100%; }
+    .aside h4 {
+      width: 100%; }
+  .aside p {
+    font-size: 1em;
+    padding-top: 50px; }
+  #formContact {
+    display: grid;
+    grid-template-areas: "nombre nombre" "apellido apellido"  "email email"  "telefono telefono"   "localidad localidad"   "btn-submit clean";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-items: stretch;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    padding: 30px;
+    border: none;
+    align-items: center;
+    background-color: #e06377;
+    border-radius: 10px;
+    box-shadow: 0px 9px 21px 6px rgba(0, 0, 0, 0.5);
+    font-size: 0.8em; }
+  .mainContact {
+    margin-right: 20px;
+    margin-left: 20px; }
+  .footerP p {
+    display: inline-block;
+    color: black;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 1.2em; }
+  .footerP h4 {
+    font-size: 1em; }
+  @keyframes redes {
+    from {
+      transform: scale(1); }
+    50% {
+      transform: scale(1.2); }
+    to {
+      transform: scale(1); } }
+  body.dark {
+    background-color: #100F10; }
+    body.dark .menu {
+      background-color: #242424; }
+    body.dark header label {
+      width: 50px;
+      height: auto; }
+    body.dark header label:hover {
+      background-color: #1B1B1B;
+      width: 50px; } }
+
+@media (min-width: 626px) and (max-width: 1065px) {
+  .main {
+    margin-top: 30px;
+    min-width: 100%; }
+  .aside {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+    margin: 40px;
+    justify-content: space-between; }
+    .aside h4 {
+      font-size: 1.9em; }
+      .aside h4 ul {
+        list-style: square; }
+        .aside h4 ul li {
+          font-size: 1.3em; } }
+
+body.dark {
+  background-color: #100F10; }
+  body.dark header {
+    background-color: #242424;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.45); }
+  body.dark .menu li:hover {
+    background-color: #242424; }
+  body.dark .logodark {
+    display: inherit; }
+  body.dark .logoprincipal {
+    display: none; }
+  body.dark .containerMov_titulo {
+    color: rgba(255, 255, 255, 0.67); }
+  body.dark .containerMov__text-parrafo {
+    color: rgba(255, 255, 255, 0.67); }
+  body.dark .footerP P {
+    color: rgba(255, 255, 255, 0.67); }
+  body.dark .footerP h4 {
+    background-color: #242424; }
+  body.dark .shop1 {
+    background-color: #242424; }
+  body.dark .tituloCompras {
+    color: rgba(255, 255, 255, 0.67); }
+  body.dark .dropdown-toggle {
+    color: rgba(255, 255, 255, 0.67); }
+  body.dark .btn-info {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.67);
+    border: none; }
+  body.dark .valoracion__tarjeta-texto {
+    color: rgba(255, 255, 255, 0.96); }
+  body.dark figure.imgcont {
+    background-color: #1B1B1B; }
+  body.dark .aside h4 {
+    background-color: #242424; }
+  body.dark .tituloProducto {
+    color: rgba(255, 255, 255, 0.45); }
+  body.dark figure.imgcont {
+    box-shadow: 0px 4px 10px 3px rgba(56, 56, 56, 0.5); }
+  body.dark .aside h4 {
+    box-shadow: 0px 2px 10px 2px rgba(97, 97, 97, 0.5); }
+  body.dark #formContact {
+    background-color: #1B1B1B; }
+  body.dark .tituloContacto {
+    color: rgba(255, 255, 255, 0.67); }
