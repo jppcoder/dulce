@@ -42,13 +42,13 @@ header {
 	left: 0;
 	right: unset;
 	border-radius: 100px;
-	-webkit-transition: .3s ease all;
 	transition: .3s ease all;
 	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .switch.active {
-	background: orange;
+	background: rgb(199, 194, 184);
 	color: #000;
+	
 } 
 .switch.active::after {
 	right: 0;
@@ -90,7 +90,7 @@ header label {
 	width: 40px;
 	height: 40px;
 	padding: 10px;
-	border-right: 1px solid rgb(240, 154, 154);
+	
 }	
 header label:hover {
 	cursor: pointer;
