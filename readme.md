@@ -12,3 +12,12 @@ Para los estilos use Sass, particionado por paginas, para facilitar la lectura y
 
 El carrousel 3d, esta realizado de dicha manera a proposito, las imagenes que van cambiando se van achicando desde la primera hasta la cuarta, aclaro esto porque varias personas pensaron que era un error, y es simplemente una decision de diseño.
 
+url importantes:
+https://github.com/jppcoder/dulce
+gh-pages:
+https://jppcoder.github.io/dulce/
+hostinger gratuito:
+https://dulceemma.000webhostapp.com/
+
+
+
