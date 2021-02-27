@@ -24,7 +24,9 @@ body.dark {
     .containerMov__text-parrafo {
         color: $letclara;
     }
-    .pagination {display: none;}
+    .pagination {
+        display: none;
+    }
     // -----------------------footer------------------------- //
     .footerP P{
         color: $letclara;
