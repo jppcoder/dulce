@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+.shop1 {
+  height: 300px; }
+
 * {
   margin: 0px;
   padding: 0px; }
@@ -18,14 +21,15 @@
 #dulce {
   font-size: 150px;
   text-align: center;
-  font-family: 'Caveat', cursive;
+  font-family: "Sacramento", cursive;
   color: #e06377;
   margin-top: 50px; }
 
 #tejido {
   font-size: 80px;
   text-align: center;
-  color: #e06377; }
+  color: #e06377;
+  font-family: "Montserrat", sans-serif; }
 
 @keyframes start {
   from {
@@ -58,7 +62,7 @@ a {
   color: #fff; }
 
 .boton-start:hover {
-  background: #4b0626 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  background: #4b0626 radial-gradient(circle, transparent 1%, #525658 1%) center/15000%;
   color: white; }
 
 .boton-start:active {
@@ -68,7 +72,8 @@ a {
 
 #espera {
   color: #fff;
-  margin-top: -80px; }
+  margin-top: -80px;
+  font-size: 50px; }
 
 #intro-link {
   text-decoration: none; }
@@ -93,9 +98,6 @@ a {
   to {
     transform: scale(2);
     margin: 50px; } }
-
-.shop1 {
-  height: 300px; }
 
 body {
   display: flex;
@@ -747,15 +749,17 @@ span {
   #dulce {
     display: flex;
     max-width: 300px;
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 150px;
     text-align: center;
     padding-right: 10px; }
   #tejido {
     font-size: 45px; }
   #espera {
-    font-size: 30px;
-    text-align: center; }
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 300px; }
   .emma {
     font-family: "Montserrat", sans-serif;
     font-size: 2em;
@@ -896,6 +900,8 @@ body.dark {
     color: rgba(255, 255, 255, 0.67); }
   body.dark .containerMov__text-parrafo {
     color: rgba(255, 255, 255, 0.67); }
+  body.dark .pagination {
+    display: none; }
   body.dark .footerP P {
     color: rgba(255, 255, 255, 0.67); }
   body.dark .footerP h4 {

@@ -1,7 +1,8 @@
 *{ 	margin: 0px;
 	padding: 0px;
 }
-.start {background-color:#e06377;
+.start {
+	background-color:#e06377;
 	height:100vh;
 	width: 100%;
 	display: flex;
@@ -12,23 +13,32 @@
 	animation-fill-mode: forwards;
 	align-items: center;
 }
-#dulce { font-size: 150px;
+#dulce { 
+	font-size: 150px;
 	text-align: center;
-	font-family: 'Caveat', cursive;
+	font-family: $fontannie;
 	color: #e06377;
 	margin-top: 50px;
 }
-#tejido { font-size: 80px;
+#tejido { 
+	font-size: 80px;
 	text-align: center;
 	color:#e06377;
+	font-family: $fontraleway;
 }
 
 @keyframes start {
-	from { background-color:#fff }
+	from { 
+		background-color:#fff 
+	}
 	
-	50% {background-color: #fff;}
+	50% {
+		background-color: #fff;
+	}
 	
-	to {background-color: #e06377;}
+	to {
+		background-color: #e06377;
+	}
 }
 .boton-start {
 	width: 100px;
@@ -48,11 +58,12 @@
 	animation-duration:7s;
 	animation-fill-mode: forwards;
 }
-a {text-decoration: none;
+a {
+	text-decoration: none;
 	color: #fff;
 }
 .boton-start:hover {
-	background:#4b0626 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+	background:#4b0626 radial-gradient(circle, transparent 1%, #525658 1%) center/15000%;
 	color: white;
 }
 .boton-start:active{
@@ -60,14 +71,17 @@ a {text-decoration: none;
 	background-size: 100%;
 	transition: background 0s;
 }
-#espera { color: #fff;
+#espera { 
+	color: #fff;
 	margin-top:-80px;
+	font-size: 50px;
 }
 #intro-link {
 	text-decoration: none;
 }
 @keyframes botonStart {
-	from{transform: scale(0);
+	from{
+		transform: scale(0);
 		transform: rotate(0deg);
 		border:#e06377;
 		background-color: #fff;
@@ -75,7 +89,8 @@ a {text-decoration: none;
 		opacity: 0;
 		margin: 50px;
 	}
-	50% {transform: scale(0);
+	50% {
+		transform: scale(0);
 		transform: rotate(180deg);
 		border:#e06377;
 		background-color: #e06377;
@@ -83,7 +98,8 @@ a {text-decoration: none;
 		opacity: 0;
 		margin: 50px;
 	}
-	to {transform: scale(2);
+	to {
+		transform: scale(2);
 		margin: 50px;}
 		
 	}
